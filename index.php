@@ -8,9 +8,9 @@ $app->config('debug', true);
 
 $app->get('/', function() {
     
-	$sql = new Hcode\DB\Sql();
-	$resultas = $sql->select("SELECT * FROM tb_users");
-	echo json_encode($resultas);
+	$page = new Hcode\Page();
+
+	$page->setTpl("index");
 
 });
 
